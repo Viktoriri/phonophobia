@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("../fonts/fantasquesansmono-regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("../fonts/fantasquesansmono-bold.otf") format("opentype");
+    font-weight: 700 900;
+    font-style: normal;
+}
+
+* {
+    font-family: "Fantasque Sans Mono", monospace;
+}

@@ -1,3 +1,504 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("../fonts/fantasquesansmono-regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
+    src: url("../fonts/fantasquesansmono-bold.otf") format("opentype");
+    font-weight: 700 900;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Fantasque Sans Mono", monospace;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background: #080808;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: url("../assets/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand {
+    position: absolute;
+    top: 3%;
+    right: 2.5%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: right;
+    z-index: 5;
+    color: #ff0000;
+}
+
+.logo {
+    display: block;
+    width: 110px;
+    height: auto;
+    flex-shrink: 0;
+    transform: translateY(-3px);
+}
+
+.brand-info h1 {
+    color: #ff0000;
+    font-size: clamp(30px, 6.5vw, 96px);
+    line-height: 1;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.brand-info p {
+    color: #ff0000;
+    margin-top: 4px;
+    font-size: clamp(12px, 2.2vw, 32px);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.headline h2 {
+    position: absolute;
+    margin: 0;
+    color: #ff0000;
+    font-weight: 900;
+    line-height: 0.85;
+    white-space: nowrap;
+    z-index: 2;
+}
+
+.its {
+    top: 5%;
+    left: 3%;
+    font-size: clamp(70px, 13.5vw, 200px);
+}
+
+.fun {
+    top: 28%;
+    left: 2%;
+    font-size: clamp(90px, 17vw, 250px);
+}
+
+.to {
+    top: 36%;
+    right: 22%;
+    left: auto;
+    font-size: clamp(40px, 6.8vw, 100px);
+    text-align: right;
+}
+
+.be {
+    top: 28%;
+    right: 3%;
+    left: auto;
+    font-size: clamp(70px, 13.5vw, 200px);
+    text-align: right;
+}
+
+.afraid {
+    top: 52%;
+    right: 3%;
+    left: auto;
+    font-size: clamp(80px, 17vw, 250px);
+    text-align: right;
+}
+
+.small-text {
+    position: absolute;
+    z-index: 4;
+    color: #ff0000;
+    font-size: clamp(12px, 1.65vw, 24px);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.text-one {
+    top: 51%;
+    left: 2.5%;
+}
+
+.text-two {
+    top: 75%;
+    left: 67%;
+}
+
+.fear-button {
+    position: absolute;
+    top: 74%;
+    left: 2%;
+    width: clamp(230px, 40vw, 390px);
+    aspect-ratio: 453 / 234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.button-shape {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fear-button span {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    font-size: clamp(26px, 4.4vw, 64px);
+    font-weight: 900;
+    white-space: nowrap;
+    transform: translateY(-5px);
+}
+
+.hand {
+    position: absolute;
+    z-index: 3;
+    display: block;
+    width: 79%;
+    max-width: none;
+    height: auto;
+    right: -10%;
+    bottom: -12%;
+    pointer-events: none;
+}
+
+.services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: url("../assets/bg-skull.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.service-card {
+    position: absolute;
+    width: 32%;
+    aspect-ratio: 200 / 115;
+    background-image: url("../assets/card-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff3333;
+    text-align: center;
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 8% 7%;
+    font-family: "Fantasque Sans Mono", monospace;
+}
+
+.card-content h2 {
+    margin: 0 0 10px;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(17px, 2.8vw, 25px);
+    line-height: 1.1;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.card-content p {
+    margin: 0;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(12px, 1.6vw, 15px);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.quest-card {
+    top: 10%;
+    left: 4%;
+}
+
+.games-card {
+    top: 51%;
+    left: 4%;
+    width: 31%;
+}
+
+.show-card {
+    top: 35%;
+    right: 3%;
+    width: 33%;
+}
+
+.photo-card {
+    top: 74%;
+    right: 5%;
+    width: 31%;
+}
+
+.fear-story {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: url("../assets/bg-we.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ff0000;
+    font-family: "Fantasque Sans Mono", monospace;
+}
+
+.fear-story-title {
+    position: absolute;
+    top: 6%;
+    left: 5.5%;
+    width: 90%;
+    margin: 0;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(70px, 9.2vw, 130px);
+    line-height: 0.92;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #ff0000;
+}
+
+.fear-story-title span {
+    display: block;
+}
+
+.fear-story-title .story-line-one {
+    text-align: left;
+}
+
+.fear-story-title .story-line-two {
+    text-align: left;
+    margin-top: 1%;
+    padding-left: 0;
+    transform: translateY(0);
+}
+
+.fear-story-title .story-line-three {
+    text-align: right;
+    margin-top: 1%;
+}
+
+.fear-story-subtitle {
+    position: absolute;
+    top: 65%;
+    right: 3.5%;
+    margin: 0;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(16px, 2vw, 25px);
+    line-height: 1;
+    font-weight: 400;
+    color: #ff0000;
+    white-space: nowrap;
+}
+
+.fear-story-card {
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
+    width: 56%;
+    aspect-ratio: 453 / 234;
+    background-image: url("../assets/card-bg.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(8deg);
+    transform-origin: center;
+}
+
+.fear-story-card p {
+    width: 83%;
+    margin: 0;
+    color: #ff3333;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(13px, 1.55vw, 19px);
+    line-height: 1.25;
+    font-weight: 900;
+    text-align: center;
+}
+
+.location-first {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: url("../assets/bg-1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.location-first-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.location-title {
+    position: absolute;
+    top: 3%;
+    left: 5.5%;
+    width: 89%;
+    margin: 0;
+    color: #ff0000;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(48px, 10.5vw, 150px);
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+}
+
+.title-line-one,
+.title-line-two,
+.title-line-three {
+    display: block;
+}
+
+.title-line-one {
+    text-align: left;
+}
+
+.title-line-two {
+    margin-top: 1.5%;
+    text-align: left;
+}
+
+.title-line-three {
+    margin-top: 1.5%;
+    text-align: left;
+}
+
+.location-second {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100svh;
+    min-height: 600px;
+    overflow: hidden;
+    isolation: isolate;
+    background-image: url("../assets/bg-2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.location-second-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.location-button {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: min(70%, 684px);
+    aspect-ratio: 684 / 219;
+    padding: 0;
+    color: #000000;
+    text-decoration: none;
+    z-index: 3;
+    cursor: default;
+}
+
+.location-button-shape {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.location-button-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 85%;
+    color: #000000;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(12px, 2.2vw, 30px);
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.location-address {
+    position: absolute;
+    left: 3.5%;
+    bottom: 15%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: #ff0000;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(13px, 2.2vw, 30px);
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.2;
+    z-index: 4;
+}
+
+.location-caption {
+    position: absolute;
+    right: 2.5%;
+    bottom: 2%;
+    margin: 0;
+    color: #ff0000;
+    font-family: "Fantasque Sans Mono", monospace;
+    font-size: clamp(8px, 1.2vw, 16px);
+    font-weight: 400;
+    line-height: 1;
+    text-align: right;
+    z-index: 4;
+}
+
